@@ -28,6 +28,8 @@
     "@commitlint/cli": "^20.2.0",
     "@commitlint/config-conventional": "^20.2.0",
     "@eslint/eslintrc": "^3",
+    "@typescript-eslint/eslint-plugin": "^8.49.0",
+    "@typescript-eslint/parser": "^8.49.0",
     "eslint": "^9",
     "eslint-config-next": "16.0.10",
     "eslint-config-prettier": "^10.1.8",
@@ -38,16 +40,24 @@
     "typescript": "^5.9.3"
   },
   "lint-staged": {
-    "apps/**/*.{js,jsx,ts,tsx}": [
-      "eslint --fix --config eslint.config.js",
+    "apps/client/**/*.{js,jsx,ts,tsx}": [
+      "cd apps/client && eslint --fix --config eslint.config.mjs",
       "prettier --write"
     ],
-    "packages/**/*.{js,jsx,ts,tsx}": [
-      "eslint --fix --config eslint.config.js",
+    "apps/admin/**/*.{js,jsx,ts,tsx}": [
+      "cd apps/admin && eslint --fix --config eslint.config.mjs",
       "prettier --write"
     ],
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix --config eslint.config.js",
+    "packages/ui/**/*.{js,jsx,ts,tsx}": [
+      "cd packages/ui && eslint --fix --config eslint.config.mjs",
+      "prettier --write"
+    ],
+    "packages/utils/**/*.{js,jsx,ts,tsx}": [
+      "cd packages/utils && eslint --fix --config eslint.config.mjs",
+      "prettier --write"
+    ],
+    "packages/types/**/*.{js,jsx,ts,tsx}": [
+      "cd packages/types && eslint --fix --config eslint.config.mjs",
       "prettier --write"
     ],
     "*.{json,css,md}": [
