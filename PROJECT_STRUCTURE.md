@@ -5,10 +5,7 @@
 ```
 nextjs-demo/                           # pnpm workspace monorepo root
 ├── 📁 apps/                          # Next.js applications
-│   ├── 📁 .vscode/                   # VS Code workspace settings
-│   │   ├── 📄 extensions.json       # Recommended extensions
-│   │   └── 📄 settings.json         # Workspace settings
-│   │
+│
 │   ├── 📁 client/                    # Customer-facing app (port 3000)
 │   │   ├── 📁 public/                # Static assets for client
 │   │   │   ├── 📄 file.svg
@@ -121,10 +118,16 @@ nextjs-demo/                           # pnpm workspace monorepo root
 │       ├── 📄 getting-started.md     # Quick start guide
 │       └── 📄 development-workflow.md # Dev workflow
 │
+├── 📁 .vscode/                       # VS Code workspace settings
+│   ├── 📄 extensions.json           # Recommended extensions
+│   └── 📄 settings.json             # Workspace settings
+│
 ├── 📁 .git/                          # Git repository
 │
 ├── 📄 .env.example                   # Environment variables template
 ├── 📄 .gitignore                     # Git ignore rules
+├── 📄 .nvmrc                         # Node.js version specification
+├── 📄 .prettierignore                # Prettier ignore file
 ├── 📄 .prettierrc                    # Prettier configuration
 ├── 📄 CLAUDE.md                      # Claude Code documentation
 ├── 📄 README.md                      # Project overview
