@@ -20,6 +20,10 @@
       "@workspace/utils/*": ["./packages/utils/src/*"],
       "@workspace/types": ["./packages/types/src"],
       "@workspace/types/*": ["./packages/types/src/*"],
+      "@workspace/hooks": ["./packages/hooks/src"],
+      "@workspace/hooks/*": ["./packages/hooks/src/*"],
+      "@workspace/api": ["./packages/api/src"],
+      "@workspace/api/*": ["./packages/api/src/*"],
       "@workspace/config": ["./packages/config"],
       "@workspace/config/*": ["./packages/config/*"]
     }

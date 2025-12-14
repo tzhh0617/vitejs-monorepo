@@ -5,6 +5,8 @@
     { "path": "./tsconfig.node.json" },
     { "path": "./packages/types" },
     { "path": "./packages/utils" },
+    { "path": "./packages/hooks" },
+    { "path": "./packages/api" },
     { "path": "./packages/ui" },
     { "path": "./apps/client" },
     { "path": "./apps/admin" }

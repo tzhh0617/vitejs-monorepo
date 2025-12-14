@@ -1,17 +1,11 @@
 {
   "extends": "../../tsconfig.app.json",
   "compilerOptions": {
-    "jsx": "react-jsx",
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"],
-      "@/components/*": ["./src/components/*"],
-      "@/lib/*": ["./src/lib/*"],
-      "@/hooks/*": ["./src/hooks/*"]
-    },
-    "composite": true
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "outDir": "./dist"
   },
-  "references": [{ "path": "../types" }, { "path": "../utils" }],
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
 }

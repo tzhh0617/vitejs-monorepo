@@ -12,8 +12,11 @@
     "baseUrl": ".",
     "incremental": true,
     "allowSyntheticDefaultImports": true,
-    "noEmit": true,
-    "plugins": [{ "name": "next" }],
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
     "paths": {
       "@workspace/ui": ["./packages/ui/src"],
       "@workspace/ui/*": ["./packages/ui/src/*"],
@@ -21,6 +24,10 @@
       "@workspace/utils/*": ["./packages/utils/src/*"],
       "@workspace/types": ["./packages/types/src"],
       "@workspace/types/*": ["./packages/types/src/*"],
+      "@workspace/hooks": ["./packages/hooks/src"],
+      "@workspace/hooks/*": ["./packages/hooks/src/*"],
+      "@workspace/api": ["./packages/api/src"],
+      "@workspace/api/*": ["./packages/api/src/*"],
       "@workspace/config": ["./packages/config"],
       "@workspace/config/*": ["./packages/config/*"]
     }

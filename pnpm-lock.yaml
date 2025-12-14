@@ -149,6 +149,22 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
 
+  packages/api:
+    dependencies:
+      '@workspace/types':
+        specifier: workspace:*
+        version: link:../types
+      '@workspace/utils':
+        specifier: workspace:*
+        version: link:../utils
+    devDependencies:
+      '@types/node':
+        specifier: ^25.0.2
+        version: 25.0.2
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+
   packages/config:
     devDependencies:
       autoprefixer:
@@ -163,6 +179,34 @@ importers:
       tailwindcss-animate:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@4.1.18)
+
+  packages/hooks:
+    dependencies:
+      '@workspace/types':
+        specifier: workspace:*
+        version: link:../types
+      '@workspace/utils':
+        specifier: workspace:*
+        version: link:../utils
+    devDependencies:
+      '@types/node':
+        specifier: ^25.0.2
+        version: 25.0.2
+      '@types/react':
+        specifier: ^19.0.10
+        version: 19.2.7
+      '@types/react-dom':
+        specifier: ^19.0.7
+        version: 19.2.3(@types/react@19.2.7)
+      react:
+        specifier: ^19.1.0
+        version: 19.2.3
+      react-dom:
+        specifier: ^19.1.0
+        version: 19.2.3(react@19.2.3)
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
 
   packages/types:
     devDependencies:
