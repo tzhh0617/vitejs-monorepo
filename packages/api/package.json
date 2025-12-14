@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@workspace/types": "workspace:*",
-    "@workspace/utils": "workspace:*"
+    "@workspace/lib": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^25.0.2",

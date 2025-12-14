@@ -50,15 +50,15 @@ importers:
 
   apps/admin:
     dependencies:
+      '@workspace/components':
+        specifier: workspace:*
+        version: link:../../packages/components
+      '@workspace/lib':
+        specifier: workspace:*
+        version: link:../../packages/lib
       '@workspace/types':
         specifier: workspace:*
         version: link:../../packages/types
-      '@workspace/ui':
-        specifier: workspace:*
-        version: link:../../packages/ui
-      '@workspace/utils':
-        specifier: workspace:*
-        version: link:../../packages/utils
       next:
         specifier: ^16.0.10
         version: 16.0.10(@babel/core@7.28.5)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -99,18 +99,18 @@ importers:
 
   apps/client:
     dependencies:
+      '@workspace/components':
+        specifier: workspace:*
+        version: link:../../packages/components
       '@workspace/config':
         specifier: workspace:*
         version: link:../../packages/config
+      '@workspace/lib':
+        specifier: workspace:*
+        version: link:../../packages/lib
       '@workspace/types':
         specifier: workspace:*
         version: link:../../packages/types
-      '@workspace/ui':
-        specifier: workspace:*
-        version: link:../../packages/ui
-      '@workspace/utils':
-        specifier: workspace:*
-        version: link:../../packages/utils
       next:
         specifier: ^16.0.10
         version: 16.0.10(@babel/core@7.28.5)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -151,12 +151,12 @@ importers:
 
   packages/api:
     dependencies:
+      '@workspace/lib':
+        specifier: workspace:*
+        version: link:../lib
       '@workspace/types':
         specifier: workspace:*
         version: link:../types
-      '@workspace/utils':
-        specifier: workspace:*
-        version: link:../utils
     devDependencies:
       '@types/node':
         specifier: ^25.0.2
@@ -165,56 +165,7 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
 
-  packages/config:
-    devDependencies:
-      autoprefixer:
-        specifier: ^10.4.22
-        version: 10.4.22(postcss@8.5.6)
-      postcss:
-        specifier: ^8.5.6
-        version: 8.5.6
-      tailwindcss:
-        specifier: ^4.1.18
-        version: 4.1.18
-      tailwindcss-animate:
-        specifier: ^1.0.7
-        version: 1.0.7(tailwindcss@4.1.18)
-
-  packages/hooks:
-    dependencies:
-      '@workspace/types':
-        specifier: workspace:*
-        version: link:../types
-      '@workspace/utils':
-        specifier: workspace:*
-        version: link:../utils
-    devDependencies:
-      '@types/node':
-        specifier: ^25.0.2
-        version: 25.0.2
-      '@types/react':
-        specifier: ^19.0.10
-        version: 19.2.7
-      '@types/react-dom':
-        specifier: ^19.0.7
-        version: 19.2.3(@types/react@19.2.7)
-      react:
-        specifier: ^19.1.0
-        version: 19.2.3
-      react-dom:
-        specifier: ^19.1.0
-        version: 19.2.3(react@19.2.3)
-      typescript:
-        specifier: ^5.9.3
-        version: 5.9.3
-
-  packages/types:
-    devDependencies:
-      typescript:
-        specifier: ^5.9.3
-        version: 5.9.3
-
-  packages/ui:
+  packages/components:
     dependencies:
       '@hookform/resolvers':
         specifier: ^5.2.2
@@ -297,12 +248,12 @@ importers:
       '@tailwindcss/postcss':
         specifier: ^4
         version: 4.1.18
+      '@workspace/lib':
+        specifier: workspace:*
+        version: link:../lib
       '@workspace/types':
         specifier: workspace:*
         version: link:../types
-      '@workspace/utils':
-        specifier: workspace:*
-        version: link:../utils
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -362,7 +313,50 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
 
-  packages/utils:
+  packages/config:
+    devDependencies:
+      autoprefixer:
+        specifier: ^10.4.22
+        version: 10.4.22(postcss@8.5.6)
+      postcss:
+        specifier: ^8.5.6
+        version: 8.5.6
+      tailwindcss:
+        specifier: ^4.1.18
+        version: 4.1.18
+      tailwindcss-animate:
+        specifier: ^1.0.7
+        version: 1.0.7(tailwindcss@4.1.18)
+
+  packages/hooks:
+    dependencies:
+      '@workspace/lib':
+        specifier: workspace:*
+        version: link:../lib
+      '@workspace/types':
+        specifier: workspace:*
+        version: link:../types
+    devDependencies:
+      '@types/node':
+        specifier: ^25.0.2
+        version: 25.0.2
+      '@types/react':
+        specifier: ^19.0.10
+        version: 19.2.7
+      '@types/react-dom':
+        specifier: ^19.0.7
+        version: 19.2.3(@types/react@19.2.7)
+      react:
+        specifier: ^19.1.0
+        version: 19.2.3
+      react-dom:
+        specifier: ^19.1.0
+        version: 19.2.3(react@19.2.3)
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+
+  packages/lib:
     dependencies:
       '@workspace/types':
         specifier: workspace:*
@@ -380,6 +374,12 @@ importers:
       '@types/node':
         specifier: ^25.0.2
         version: 25.0.2
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+
+  packages/types:
+    devDependencies:
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
