@@ -1,7 +1,5 @@
 export default [
   {
-    // Basic configuration for all files
-    files: ['**/*.{js,jsx,ts,tsx}'],
     ignores: [
       // Build outputs
       '.next/**',
@@ -18,6 +16,18 @@ export default [
       '.DS_Store',
       'Thumbs.db',
     ],
-    rules: {},
+  },
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: 'module',
+    },
+    rules: {
+      // Basic rules that work for all projects
+      'no-unused-vars': 'error',
+      'no-console': 'warn',
+      'prefer-const': 'error',
+    },
   },
 ]
