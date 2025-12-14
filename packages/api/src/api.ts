@@ -1,4 +1,4 @@
-import type { ApiResponse, PaginationParams } from '@workspace/types'
+import type { ApiResponse, PaginationParams, User } from '@workspace/types'
 
 export interface ApiClientConfig {
   baseURL?: string

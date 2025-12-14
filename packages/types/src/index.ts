@@ -10,7 +10,7 @@ export interface User {
 }
 
 export interface ApiResponse<T> {
-  data: T
+  data: T | null
   message: string
   success: boolean
 }
