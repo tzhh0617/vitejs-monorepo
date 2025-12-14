@@ -59,7 +59,7 @@ import { formatDate } from '@workspace/utils'
 import type { User } from '@workspace/types'
 
 // ❌ Incorrect: Relative imports across packages
-import { Button } from '../../../packages/ui/src'
+import { Button } from '../../../packages/components/src'
 ```
 
 ## 🛠️ Development Commands

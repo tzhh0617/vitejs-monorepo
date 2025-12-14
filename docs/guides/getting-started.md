@@ -100,7 +100,7 @@ pnpm run format
 ### 2. Add New Components
 
 ```typescript
-// packages/ui/src/components/ui/new-component.tsx
+// packages/components/src/components/ui/new-component.tsx
 import { cn } from "@workspace/utils";
 
 export interface NewComponentProps {
@@ -118,7 +118,7 @@ export const NewComponent = ({ className, children }: NewComponentProps) => {
 ```
 
 ```typescript
-// packages/ui/src/index.ts
+// packages/components/src/index.ts
 export * from './components/ui/new-component'
 ```
 
@@ -174,7 +174,7 @@ pnpm run clean:all        # Clean all artifacts and dependencies
 Navigate to specific package directories and run their individual scripts:
 
 ```bash
-cd packages/ui
+cd packages/components
 pnpm run dev              # Watch mode for UI package
 pnpm run build            # Build UI package
 pnpm run type-check       # Type check UI package
@@ -219,7 +219,7 @@ import { formatDate, cn } from '@workspace/utils'
 import type { User } from '@workspace/types'
 
 // ❌ Incorrect
-import { Button } from '../../packages/ui/src/components/ui/button'
+import { Button } from '../../packages/components/src/components/ui/button'
 import { formatDate } from '../../packages/utils/src/date'
 ```
 

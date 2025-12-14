@@ -14,8 +14,8 @@
     "declarationMap": true,
     "allowSyntheticDefaultImports": true,
     "paths": {
-      "@workspace/components": ["./packages/ui/src"],
-      "@workspace/components/*": ["./packages/ui/src/*"],
+      "@workspace/components": ["./packages/components/src"],
+      "@workspace/components/*": ["./packages/components/src/*"],
       "@workspace/utils": ["./packages/utils/src"],
       "@workspace/utils/*": ["./packages/utils/src/*"],
       "@workspace/types": ["./packages/types/src"],

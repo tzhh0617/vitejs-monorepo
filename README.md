@@ -103,7 +103,7 @@ This workspace includes all shadcn/ui components in the shared UI package:
 
 ### Adding New Components
 
-1. Add components to `packages/ui/src/components/`
+1. Add components to `packages/components/src/components/`
 2. Export from appropriate index files
 3. Import in apps: `import { Button } from "@workspace/components"`
 

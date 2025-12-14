@@ -68,7 +68,7 @@ apps/client & apps/admin
 ├── @workspace/types (type definitions)
 └── @workspace/config (build configs)
 
-packages/ui
+packages/components
 ├── @workspace/utils
 └── @workspace/types
 
@@ -85,7 +85,7 @@ packages/utils
 
 ### Component Development
 
-- All UI components live in `packages/ui`
+- All UI components live in `packages/components`
 - Use existing shadcn/ui components as building blocks
 - Follow the established pattern of `forwardRef` + `className` prop
 - Import UI components: `import { Button } from "@workspace/components"`
