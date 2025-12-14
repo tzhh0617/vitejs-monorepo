@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   transpilePackages: [
     '@workspace/components',
     '@workspace/hooks',
-    '@workspace/utils',
+    '@workspace/lib',
     '@workspace/types',
   ],
   experimental: {

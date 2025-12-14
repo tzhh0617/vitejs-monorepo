@@ -17,7 +17,7 @@
     "lint": "pnpm run --recursive lint",
     "lint:fix": "pnpm run --recursive lint:fix",
     "type-check": "pnpm run --recursive type-check",
-    "type-check:ui": "pnpm --filter @workspace/ui type-check",
+    "type-check:components": "pnpm --filter @workspace/components type-check",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,md}\"",
     "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,css,md}\"",
     "clean": "pnpm run --recursive clean && rm -rf node_modules",
@@ -48,12 +48,12 @@
       "cd apps/admin && eslint --fix",
       "prettier --write"
     ],
-    "packages/ui/**/*.{js,jsx,ts,tsx}": [
-      "cd packages/ui && eslint --fix",
+    "packages/components/**/*.{js,jsx,ts,tsx}": [
+      "cd packages/components && eslint --fix",
       "prettier --write"
     ],
-    "packages/utils/**/*.{js,jsx,ts,tsx}": [
-      "cd packages/utils && eslint --fix",
+    "packages/lib/**/*.{js,jsx,ts,tsx}": [
+      "cd packages/lib && eslint --fix",
       "prettier --write"
     ],
     "packages/types/**/*.{js,jsx,ts,tsx}": [

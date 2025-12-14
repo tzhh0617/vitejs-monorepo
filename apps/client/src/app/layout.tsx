@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
-import { Toaster } from '@workspace/ui'
-import '@workspace/ui/styles/globals.css'
+import { Toaster } from '@workspace/components'
+import '@workspace/components/src/styles/globals.css'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -59,7 +59,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-background font-sans antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} bg-background min-h-screen font-sans antialiased`}
       >
         {children}
         <Toaster />
