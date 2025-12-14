@@ -3,13 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "main": "./index.js",
-  "types": "./index.d.ts",
   "files": [
     "*.js",
     "*.ts",
     "*.json",
-    "*.mjs",
-    "eslint/**/*"
+    "*.mjs"
   ],
   "scripts": {
     "clean": "rm -rf node_modules dist"

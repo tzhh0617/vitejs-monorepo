@@ -1,13 +1,11 @@
 {
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@workspace/ui": ["packages/ui/src"],
-      "@workspace/utils": ["packages/utils/src"],
-      "@workspace/types": ["packages/types/src"],
-      "@workspace/config": ["packages/config/src"]
-    }
-  },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules", "dist", ".next"]
+  "files": [],
+  "references": [
+    { "path": "./packages/types" },
+    { "path": "./packages/utils" },
+    { "path": "./packages/config" },
+    { "path": "./packages/ui" },
+    { "path": "./apps/client" },
+    { "path": "./apps/admin" }
+  ]
 }
