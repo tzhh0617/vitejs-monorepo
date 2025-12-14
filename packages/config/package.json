@@ -8,7 +8,8 @@
     "*.js",
     "*.ts",
     "*.json",
-    "*.mjs"
+    "*.mjs",
+    "eslint/**/*"
   ],
   "scripts": {
     "clean": "rm -rf node_modules dist"

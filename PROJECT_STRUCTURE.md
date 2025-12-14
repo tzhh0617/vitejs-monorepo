@@ -52,7 +52,13 @@ nextjs-demo/                           # pnpm workspace monorepo root
 │   │   ├── 📄 index.ts               # Config exports
 │   │   ├── 📄 tailwind.config.ts     # Tailwind CSS configuration
 │   │   ├── 📄 postcss.config.mjs     # PostCSS configuration
-│   │   ├── 📄 eslint.config.mjs      # ESLint configuration
+│   │   ├── 📁 eslint/                 # ESLint configuration modules
+│   │   │   ├── 📄 base.js           # Base JavaScript rules
+│   │   │   ├── 📄 typescript.js     # TypeScript rules
+│   │   │   ├── 📄 react.js         # React component rules
+│   │   │   ├── 📄 next.js           # Next.js specific rules
+│   │   │   ├── 📄 packages.js       # Package-specific rules
+│   │   │   └── 📄 index.js         # Export all configs
 │   │   └── 📄 commitlint.config.cjs  # Commit linting configuration
 │   │
 │   ├── 📁 types/                      # TypeScript type definitions
