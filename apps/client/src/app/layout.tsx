@@ -1,39 +1,42 @@
-import type { Metadata, Viewport } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
-import { Toaster } from "@workspace/ui"
-import "./styles/globals.css"
+import type { Metadata, Viewport } from 'next'
+import { Geist, Geist_Mono } from 'next/font/google'
+import { Toaster } from '@workspace/ui'
+import '@workspace/ui/styles/globals.css'
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
 })
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
 })
 
 export const metadata: Metadata = {
   title: {
-    default: "Client App",
-    template: "%s | Client App",
+    default: 'Client App',
+    template: '%s | Client App',
   },
-  description: "A modern web application built with Next.js 15, TypeScript, Tailwind CSS, and shadcn/ui.",
-  keywords: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "React"],
-  authors: [{ name: "Your Name" }],
-  creator: "Your Name",
+  description:
+    'A modern web application built with Next.js 15, TypeScript, Tailwind CSS, and shadcn/ui.',
+  keywords: ['Next.js', 'TypeScript', 'Tailwind CSS', 'shadcn/ui', 'React'],
+  authors: [{ name: 'Your Name' }],
+  creator: 'Your Name',
   openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://your-domain.com",
-    title: "Next.js App",
-    description: "A modern web application built with Next.js 15, TypeScript, Tailwind CSS, and shadcn/ui.",
-    siteName: "Next.js App",
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://your-domain.com',
+    title: 'Next.js App',
+    description:
+      'A modern web application built with Next.js 15, TypeScript, Tailwind CSS, and shadcn/ui.',
+    siteName: 'Next.js App',
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Next.js App",
-    description: "A modern web application built with Next.js 15, TypeScript, Tailwind CSS, and shadcn/ui.",
+    card: 'summary_large_image',
+    title: 'Next.js App',
+    description:
+      'A modern web application built with Next.js 15, TypeScript, Tailwind CSS, and shadcn/ui.',
   },
   robots: {
     index: true,
@@ -43,8 +46,8 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
+    { media: '(prefers-color-scheme: light)', color: 'white' },
+    { media: '(prefers-color-scheme: dark)', color: 'black' },
   ],
 }
 
