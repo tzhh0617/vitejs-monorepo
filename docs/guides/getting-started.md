@@ -37,6 +37,7 @@ pnpm install
 ```
 
 This will:
+
 - Install all dependencies for the workspace
 - Link internal packages together
 - Build shared packages
@@ -60,6 +61,7 @@ pnpm run dev
 ```
 
 This will start:
+
 - **Client App**: http://localhost:3000
 - **Admin App**: http://localhost:3001
 - UI package in watch mode
@@ -117,14 +119,14 @@ export const NewComponent = ({ className, children }: NewComponentProps) => {
 
 ```typescript
 // packages/ui/src/index.ts
-export * from './components/ui/new-component';
+export * from './components/ui/new-component'
 ```
 
 ### 3. Use Components in Applications
 
 ```typescript
 // apps/client/src/app/page.tsx
-import { NewComponent } from "@workspace/ui";
+import { NewComponent } from "@workspace/components";
 
 export default function Page() {
   return (
@@ -212,13 +214,13 @@ Always use workspace package names for imports:
 
 ```typescript
 // ✅ Correct
-import { Button, Card } from "@workspace/ui";
-import { formatDate, cn } from "@workspace/utils";
-import type { User } from "@workspace/types";
+import { Button, Card } from '@workspace/components'
+import { formatDate, cn } from '@workspace/utils'
+import type { User } from '@workspace/types'
 
 // ❌ Incorrect
-import { Button } from "../../packages/ui/src/components/ui/button";
-import { formatDate } from "../../packages/utils/src/date";
+import { Button } from '../../packages/ui/src/components/ui/button'
+import { formatDate } from '../../packages/utils/src/date'
 ```
 
 ### Absolute Imports
@@ -226,12 +228,12 @@ import { formatDate } from "../../packages/utils/src/date";
 Use absolute imports within packages:
 
 ```typescript
-// ✅ Correct (within @workspace/ui)
-import { cn } from "@workspace/utils";
-import { ButtonProps } from "@workspace/types";
+// ✅ Correct (within @workspace/components)
+import { cn } from '@workspace/utils'
+import { ButtonProps } from '@workspace/types'
 
 // ✅ Correct (within @workspace/utils)
-import type { ApiResponse } from "@workspace/types";
+import type { ApiResponse } from '@workspace/types'
 ```
 
 ## Common Issues

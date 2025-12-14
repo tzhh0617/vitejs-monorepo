@@ -5,6 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Development Commands
 
 ### Workspace Commands (Root Level)
+
 - `pnpm run dev` - Start all applications in parallel (client on port 3000, admin on port 3001)
 - `pnpm run dev:client` - Start only client application at http://localhost:3000
 - `pnpm run dev:admin` - Start only admin application at http://localhost:3001
@@ -21,16 +22,19 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `pnpm run clean` - Clean all node_modules and build artifacts
 
 ### Package-Specific Commands
+
 - Navigate to specific package/app directory and run their specific scripts
 - Each package has `dev`, `build`, `lint`, `lint:fix`, `type-check`, `clean` scripts
 
 ### Git Hooks
+
 - Pre-commit hook runs `lint-staged` to lint and format staged files
 - Commit message validation uses Commitlint with conventional commits
 
 ## Architecture Overview
 
 ### Monorepo Structure
+
 This is a **pnpm workspace** monorepo with two Next.js applications sharing common packages:
 
 ```
@@ -45,6 +49,7 @@ This is a **pnpm workspace** monorepo with two Next.js applications sharing comm
 ```
 
 ### Tech Stack
+
 - **Package Manager**: pnpm workspace
 - **Framework**: Next.js 16 with App Router (both apps)
 - **Language**: TypeScript with strict ESLint rules
@@ -55,9 +60,10 @@ This is a **pnpm workspace** monorepo with two Next.js applications sharing comm
 - **Icons**: Lucide React
 
 ### Package Dependencies
+
 ```
 apps/client & apps/admin
-├── @workspace/ui (components)
+├── @workspace/components (components)
 ├── @workspace/utils (helpers)
 ├── @workspace/types (type definitions)
 └── @workspace/config (build configs)
@@ -71,50 +77,59 @@ packages/utils
 ```
 
 ### Application Responsibilities
+
 - **Client App**: Customer-facing landing page with marketing content
 - **Admin App**: Internal dashboard for managing users, content, and analytics
 
 ## Development Patterns
 
 ### Component Development
+
 - All UI components live in `packages/ui`
 - Use existing shadcn/ui components as building blocks
 - Follow the established pattern of `forwardRef` + `className` prop
-- Import UI components: `import { Button } from "@workspace/ui"`
+- Import UI components: `import { Button } from "@workspace/components"`
 - Components use Radix UI primitives for accessibility
 
 ### Utility Functions
+
 - Shared utilities in `packages/utils/src`
 - Categories: `date`, `format`, `validation`, `api`, `storage`, `auth`
 - Import utilities: `import { cn, formatDate } from "@workspace/utils"`
 
 ### Type Definitions
+
 - Shared types in `packages/types/src`
 - Includes: `User`, `ApiResponse`, `PaginationParams`, UI component props
 - Import types: `import type { User } from "@workspace/types"`
 
 ### Configuration Management
+
 - Shared configs in `packages/config`
 - Tailwind, ESLint, Prettier configurations are centralized
 - Apps import and extend from shared configs
 
 ### Import Patterns
+
 - Never use relative imports across packages
 - Always use workspace package names: `@workspace/*`
 - Follow dependency hierarchy (app → ui → utils → types)
 
 ## Code Quality
+
 - ESLint and Prettier configurations shared across workspace
 - TypeScript strict mode enabled with project references
 - Husky for Git hooks at workspace root
 - Conventional commits enforced via Commitlint
 
 ## Building and Deployment
+
 - Each app can be built and deployed independently
 - Use `pnpm run build:client` or `pnpm run build:admin`
 - Packages build their TypeScript definitions before use
 
 ## Git Workflow
+
 - All commits must follow conventional commits format
 - Pre-commit hooks automatically lint and format code
 - Use `feat:`, `fix:`, `docs:`, `style:`, `refactor:`, `test:`, `chore:` prefixes

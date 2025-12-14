@@ -5,12 +5,14 @@ This directory contains comprehensive documentation for the Next.js Workspace mo
 ## 📚 Documentation Structure
 
 ### [Architecture](./architecture/overview.md)
+
 - Monorepo architecture overview
 - Package dependency graph
 - Design principles
 - Decision records
 
 ### [Guides](./guides/)
+
 - [Getting Started](./guides/getting-started.md)
 - [Development Workflow](./guides/development-workflow.md)
 - [Adding New Packages](./guides/adding-packages.md)
@@ -18,6 +20,7 @@ This directory contains comprehensive documentation for the Next.js Workspace mo
 - [Testing Strategies](./guides/testing.md)
 
 ### [API Reference](./api/)
+
 - [Components API](./api/components.md)
 - [Utility Functions](./api/utils.md)
 - [Type Definitions](./api/types.md)
@@ -33,6 +36,7 @@ This directory contains comprehensive documentation for the Next.js Workspace mo
 ## 📋 Key Concepts
 
 ### Workspace Structure
+
 ```
 ├── apps/           # Next.js applications
 ├── packages/       # Shared packages
@@ -41,19 +45,21 @@ This directory contains comprehensive documentation for the Next.js Workspace mo
 ```
 
 ### Package Naming
+
 - `@workspace/*` - Internal packages
 - Apps use `@workspace/client` and `@workspace/admin`
-- Shared packages use `@workspace/ui`, `@workspace/utils`, etc.
+- Shared packages use `@workspace/components`, `@workspace/utils`, etc.
 
 ### Import Patterns
+
 ```typescript
 // ✅ Correct: Use workspace imports
-import { Button } from "@workspace/ui";
-import { formatDate } from "@workspace/utils";
-import type { User } from "@workspace/types";
+import { Button } from '@workspace/components'
+import { formatDate } from '@workspace/utils'
+import type { User } from '@workspace/types'
 
 // ❌ Incorrect: Relative imports across packages
-import { Button } from "../../../packages/ui/src";
+import { Button } from '../../../packages/ui/src'
 ```
 
 ## 🛠️ Development Commands

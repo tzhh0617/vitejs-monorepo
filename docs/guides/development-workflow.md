@@ -67,7 +67,7 @@ apps/client/src/
 
 ```typescript
 // apps/client/src/components/features/user-profile.tsx
-import { Avatar, Card } from "@workspace/ui";
+import { Avatar, Card } from "@workspace/components";
 import type { User } from "@workspace/types";
 
 interface UserProfileProps {
@@ -99,6 +99,7 @@ pnpm run format         # Prettier
 #### Pre-commit Hooks
 
 Pre-commit hooks automatically run:
+
 - ESLint with auto-fix
 - Prettier formatting
 - Type checking (on first file change)
@@ -147,10 +148,10 @@ apps/
 pnpm run test
 
 # Run tests for specific package
-pnpm --filter @workspace/ui test
+pnpm --filter @workspace/components test
 
 # Run tests in watch mode
-pnpm --filter @workspace/ui test:watch
+pnpm --filter @workspace/components test:watch
 
 # Run tests with coverage
 pnpm run test:coverage
@@ -227,20 +228,24 @@ Use the following PR template:
 
 ```markdown
 ## Description
+
 Brief description of changes
 
 ## Type of Change
+
 - [ ] Bug fix
 - [ ] New feature
 - [ ] Breaking change
 - [ ] Documentation update
 
 ## Testing
+
 - [ ] Unit tests pass
 - [ ] Integration tests pass
 - [ ] Manual testing completed
 
 ## Checklist
+
 - [ ] Code follows project style guidelines
 - [ ] Self-review completed
 - [ ] Documentation updated
@@ -271,6 +276,7 @@ Brief description of changes
 ### Version Management
 
 We use semantic versioning:
+
 - **MAJOR**: Breaking changes
 - **MINOR**: New features (backward compatible)
 - **PATCH**: Bug fixes (backward compatible)
@@ -287,15 +293,18 @@ All notable changes to this project will be documented in this file.
 ## [1.2.0] - 2024-01-15
 
 ### Added
+
 - User authentication system
 - Dashboard analytics
 - Dark mode support
 
 ### Changed
+
 - Updated UI component library
 - Improved performance
 
 ### Fixed
+
 - Mobile layout issues
 - Memory leaks in components
 ```
@@ -347,7 +356,7 @@ export const env = {
   apiUrl: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api',
   isDevelopment: process.env.NODE_ENV === 'development',
   isProduction: process.env.NODE_ENV === 'production',
-};
+}
 ```
 
 ## Troubleshooting
@@ -355,6 +364,7 @@ export const env = {
 ### Common Issues
 
 1. **TypeScript errors after package updates**
+
    ```bash
    pnpm run clean
    pnpm install
@@ -362,6 +372,7 @@ export const env = {
    ```
 
 2. **CSS not updating**
+
    ```bash
    # Clear Next.js cache
    rm -rf .next

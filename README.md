@@ -14,11 +14,13 @@ A modern monorepo with two Next.js applications sharing common components and ut
 ## 🏗️ Architecture
 
 ### Applications
+
 - **Client App** (port 3000) - Customer-facing frontend application
 - **Admin App** (port 3001) - Internal admin dashboard
 
 ### Shared Packages
-- **@workspace/ui** - Shared React components
+
+- **@workspace/components** - Shared React components
 - **@workspace/utils** - Shared utility functions
 - **@workspace/types** - Shared TypeScript definitions
 - **@workspace/config** - Shared build and dev configurations
@@ -50,16 +52,19 @@ A modern monorepo with two Next.js applications sharing common components and ut
 ## 🚀 Getting Started
 
 1. **Install pnpm** (if not already installed):
+
    ```bash
    npm install -g pnpm
    ```
 
 2. **Install dependencies**:
+
    ```bash
    pnpm install
    ```
 
 3. **Run development servers**:
+
    ```bash
    # Run both apps
    pnpm run dev
@@ -72,6 +77,7 @@ A modern monorepo with two Next.js applications sharing common components and ut
 ## 📜 Available Scripts
 
 ### Workspace Commands
+
 - `pnpm run dev` - Start all applications
 - `pnpm run dev:client` - Start client app only (http://localhost:3000)
 - `pnpm run dev:admin` - Start admin app only (http://localhost:3001)
@@ -96,16 +102,19 @@ This workspace includes all shadcn/ui components in the shared UI package:
 ## 🧰 Development Workflow
 
 ### Adding New Components
+
 1. Add components to `packages/ui/src/components/`
 2. Export from appropriate index files
-3. Import in apps: `import { Button } from "@workspace/ui"`
+3. Import in apps: `import { Button } from "@workspace/components"`
 
 ### Adding New Utilities
+
 1. Add utilities to `packages/utils/src/`
 2. Export from `packages/utils/src/index.ts`
 3. Import in apps: `import { formatDate } from "@workspace/utils"`
 
 ### Adding New Types
+
 1. Add types to `packages/types/src/`
 2. Export from `packages/types/src/index.ts`
 3. Import in apps: `import type { User } from "@workspace/types"`
