@@ -1,0 +1,51 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["dom", "dom.iterable", "es6"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@workspace/ui": ["./packages/ui/src"],
+      "@workspace/ui/*": ["./packages/ui/src/*"],
+      "@workspace/utils": ["./packages/utils/src"],
+      "@workspace/utils/*": ["./packages/utils/src/*"],
+      "@workspace/types": ["./packages/types/src"],
+      "@workspace/types/*": ["./packages/types/src/*"],
+      "@workspace/config": ["./packages/config"],
+      "@workspace/config/*": ["./packages/config/*"]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    ".next"
+  ],
+  "references": [
+    { "path": "./packages/types" },
+    { "path": "./packages/utils" },
+    { "path": "./packages/ui" },
+    { "path": "./apps/client" },
+    { "path": "./apps/admin" }
+  ]
+}
