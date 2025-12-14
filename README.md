@@ -73,13 +73,15 @@ A modern monorepo with two Next.js applications sharing common components and ut
 
 ### Workspace Commands
 - `pnpm run dev` - Start all applications
-- `pnpm run dev:client` - Start client app only
-- `pnpm run dev:admin` - Start admin app only
+- `pnpm run dev:client` - Start client app only (http://localhost:3000)
+- `pnpm run dev:admin` - Start admin app only (http://localhost:3001)
 - `pnpm run build` - Build all applications
 - `pnpm run lint` - Lint all packages and apps
+- `pnpm run lint:fix` - Fix ESLint issues
 - `pnpm run type-check` - Type check workspace
 - `pnpm run format` - Format all code
-- `pnpm run clean` - Clean all artifacts
+- `pnpm run clean` - Clean build artifacts
+- `pnpm run clean:all` - Clean all artifacts and dependencies
 
 ## 🎨 Components
 

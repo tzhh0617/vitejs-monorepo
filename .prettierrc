@@ -9,6 +9,5 @@
   "bracketSpacing": true,
   "bracketSameLine": false,
   "arrowParens": "always",
-  "endOfLine": "lf",
-  "tailwindConfig": "./packages/config/tailwind.config.ts"
+  "endOfLine": "lf"
 }
