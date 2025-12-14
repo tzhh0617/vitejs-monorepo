@@ -100,7 +100,7 @@ pnpm run format
 ### 2. Add New Components
 
 ```typescript
-// packages/components/src/components/ui/new-component.tsx
+// packages/ui/src/components/ui/new-component.tsx
 import { cn } from "@workspace/utils";
 
 export interface NewComponentProps {
@@ -118,7 +118,7 @@ export const NewComponent = ({ className, children }: NewComponentProps) => {
 ```
 
 ```typescript
-// packages/components/src/index.ts
+// packages/ui/src/index.ts
 export * from './components/ui/new-component'
 ```
 
@@ -126,7 +126,7 @@ export * from './components/ui/new-component'
 
 ```typescript
 // apps/client/src/app/page.tsx
-import { NewComponent } from "@workspace/components";
+import { NewComponent } from "@workspace/ui";
 
 export default function Page() {
   return (
@@ -174,7 +174,7 @@ pnpm run clean:all        # Clean all artifacts and dependencies
 Navigate to specific package directories and run their individual scripts:
 
 ```bash
-cd packages/components
+cd packages/ui
 pnpm run dev              # Watch mode for UI package
 pnpm run build            # Build UI package
 pnpm run type-check       # Type check UI package
@@ -214,12 +214,12 @@ Always use workspace package names for imports:
 
 ```typescript
 // ✅ Correct
-import { Button, Card } from '@workspace/components'
+import { Button, Card } from '@workspace/ui'
 import { formatDate, cn } from '@workspace/utils'
 import type { User } from '@workspace/types'
 
 // ❌ Incorrect
-import { Button } from '../../packages/components/src/components/ui/button'
+import { Button } from '../../packages/ui/src/components/ui/button'
 import { formatDate } from '../../packages/utils/src/date'
 ```
 
@@ -228,7 +228,7 @@ import { formatDate } from '../../packages/utils/src/date'
 Use absolute imports within packages:
 
 ```typescript
-// ✅ Correct (within @workspace/components)
+// ✅ Correct (within @workspace/ui)
 import { cn } from '@workspace/utils'
 import { ButtonProps } from '@workspace/types'
 

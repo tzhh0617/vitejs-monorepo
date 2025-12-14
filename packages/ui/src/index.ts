@@ -1,5 +1,5 @@
 // UI Components
-export * from './ui'
+export * from './components'
 
 // Hooks
 export * from './hooks'

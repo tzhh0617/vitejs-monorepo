@@ -48,18 +48,18 @@ This directory contains comprehensive documentation for the Next.js Workspace mo
 
 - `@workspace/*` - Internal packages
 - Apps use `@workspace/client` and `@workspace/admin`
-- Shared packages use `@workspace/components`, `@workspace/utils`, etc.
+- Shared packages use `@workspace/ui`, `@workspace/utils`, etc.
 
 ### Import Patterns
 
 ```typescript
 // ✅ Correct: Use workspace imports
-import { Button } from '@workspace/components'
+import { Button } from '@workspace/ui'
 import { formatDate } from '@workspace/utils'
 import type { User } from '@workspace/types'
 
 // ❌ Incorrect: Relative imports across packages
-import { Button } from '../../../packages/components/src'
+import { Button } from '../../../packages/ui/src'
 ```
 
 ## 🛠️ Development Commands

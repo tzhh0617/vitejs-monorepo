@@ -1,14 +1,9 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  transpilePackages: [
-    '@workspace/components',
-    '@workspace/hooks',
-    '@workspace/lib',
-    '@workspace/types',
-  ],
+  transpilePackages: ['@workspace/ui', '@workspace/types'],
   experimental: {
-    optimizePackageImports: ['@workspace/components'],
+    optimizePackageImports: ['@workspace/ui'],
   },
 }
 

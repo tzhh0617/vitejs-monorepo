@@ -20,7 +20,7 @@ A modern monorepo with two Next.js applications sharing common components and ut
 
 ### Shared Packages
 
-- **@workspace/components** - Shared React components
+- **@workspace/ui** - Shared React components
 - **@workspace/utils** - Shared utility functions
 - **@workspace/types** - Shared TypeScript definitions
 - **@workspace/config** - Shared build and dev configurations
@@ -103,9 +103,9 @@ This workspace includes all shadcn/ui components in the shared UI package:
 
 ### Adding New Components
 
-1. Add components to `packages/components/src/components/`
+1. Add components to `packages/ui/src/components/`
 2. Export from appropriate index files
-3. Import in apps: `import { Button } from "@workspace/components"`
+3. Import in apps: `import { Button } from "@workspace/ui"`
 
 ### Adding New Utilities
 

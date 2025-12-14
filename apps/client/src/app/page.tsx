@@ -1,4 +1,4 @@
-import { HeroSection, FeaturesSection, StatsSection, Navbar, Footer } from '@workspace/components'
+import { HeroSection, FeaturesSection, StatsSection, Navbar, Footer } from '@workspace/ui'
 
 export default function Home() {
   return (

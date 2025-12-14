@@ -18,14 +18,10 @@
       }
     ],
     "paths": {
-      "@workspace/components": ["./packages/components/src"],
-      "@workspace/components/*": ["./packages/components/src/*"],
-      "@workspace/utils": ["./packages/utils/src"],
-      "@workspace/utils/*": ["./packages/utils/src/*"],
+      "@workspace/ui": ["./packages/ui/src"],
+      "@workspace/ui/*": ["./packages/ui/src/*"],
       "@workspace/types": ["./packages/types/src"],
       "@workspace/types/*": ["./packages/types/src/*"],
-      "@workspace/hooks": ["./packages/hooks/src"],
-      "@workspace/hooks/*": ["./packages/hooks/src/*"],
       "@workspace/api": ["./packages/api/src"],
       "@workspace/api/*": ["./packages/api/src/*"],
       "@workspace/config": ["./packages/config"],

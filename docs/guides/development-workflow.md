@@ -67,7 +67,7 @@ apps/client/src/
 
 ```typescript
 // apps/client/src/components/features/user-profile.tsx
-import { Avatar, Card } from "@workspace/components";
+import { Avatar, Card } from "@workspace/ui";
 import type { User } from "@workspace/types";
 
 interface UserProfileProps {
@@ -148,10 +148,10 @@ apps/
 pnpm run test
 
 # Run tests for specific package
-pnpm --filter @workspace/components test
+pnpm --filter @workspace/ui test
 
 # Run tests in watch mode
-pnpm --filter @workspace/components test:watch
+pnpm --filter @workspace/ui test:watch
 
 # Run tests with coverage
 pnpm run test:coverage

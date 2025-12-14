@@ -1,6 +1,6 @@
-import { DashboardSidebar } from '@workspace/components'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@workspace/components'
-import { Button } from '@workspace/components'
+import { DashboardSidebar } from '@workspace/ui'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@workspace/ui'
+import { Button } from '@workspace/ui'
 
 export default function AdminPage() {
   return (

@@ -63,12 +63,12 @@ This is a **pnpm workspace** monorepo with two Next.js applications sharing comm
 
 ```
 apps/client & apps/admin
-├── @workspace/components (components)
+├── @workspace/ui (components)
 ├── @workspace/utils (helpers)
 ├── @workspace/types (type definitions)
 └── @workspace/config (build configs)
 
-packages/components
+packages/ui
 ├── @workspace/utils
 └── @workspace/types
 
@@ -85,10 +85,10 @@ packages/utils
 
 ### Component Development
 
-- All UI components live in `packages/components`
+- All UI components live in `packages/ui`
 - Use existing shadcn/ui components as building blocks
 - Follow the established pattern of `forwardRef` + `className` prop
-- Import UI components: `import { Button } from "@workspace/components"`
+- Import UI components: `import { Button } from "@workspace/ui"`
 - Components use Radix UI primitives for accessibility
 
 ### Utility Functions

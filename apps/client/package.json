@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@workspace/config": "workspace:*",
-    "@workspace/components": "workspace:*",
+    "@workspace/ui": "workspace:*",
     "@workspace/lib": "workspace:*",
     "@workspace/types": "workspace:*",
     "next": "^16.0.10",

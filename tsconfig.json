@@ -1,14 +1,26 @@
 {
   "files": [],
   "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" },
-    { "path": "./packages/types" },
-    { "path": "./packages/lib" },
-    { "path": "./packages/hooks" },
-    { "path": "./packages/api" },
-    { "path": "./packages/components" },
-    { "path": "./apps/client" },
-    { "path": "./apps/admin" }
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.node.json"
+    },
+    {
+      "path": "./packages/types"
+    },
+    {
+      "path": "./packages/api"
+    },
+    {
+      "path": "./packages/ui"
+    },
+    {
+      "path": "./apps/client"
+    },
+    {
+      "path": "./apps/admin"
+    }
   ]
 }
