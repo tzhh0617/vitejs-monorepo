@@ -10,7 +10,6 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
-    "incremental": true,
     "allowSyntheticDefaultImports": true,
     "plugins": [
       {

@@ -6,6 +6,11 @@
     "declarationMap": true,
     "outDir": "./dist"
   },
+  "references": [
+    {
+      "path": "../types"
+    }
+  ],
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }
