@@ -1,27 +1,71 @@
 import tsParser from '@typescript-eslint/parser';
 import tsPlugin from '@typescript-eslint/eslint-plugin';
+import nextPlugin from '@next/eslint-plugin-next';
 
 export default [
   {
     ignores: [
-      // Build outputs
       '.next/**',
       'out/**',
       'build/**',
       'dist/**',
-      // Dependencies
+      '.turbo/**',
       'node_modules/**',
       'pnpm-lock.yaml',
-      // Coverage
       'coverage/**',
-      // Temporary files
       '*.log',
       '.DS_Store',
       'Thumbs.db',
     ],
   },
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    files: ['apps/**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      parser: tsParser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+    },
+    plugins: {
+      '@next/next': nextPlugin,
+      '@typescript-eslint': tsPlugin,
+    },
+    rules: {
+      '@next/next/no-html-link-for-pages': 'error',
+      '@next/next/no-img-element': 'error',
+      '@next/next/no-page-custom-font': 'error',
+      '@next/next/no-duplicate-head': 'error',
+      '@next/next/no-script-component-in-head': 'error',
+      '@next/next/no-title-in-document-head': 'error',
+      '@next/next/google-font-display': 'warn',
+      '@next/next/google-font-preconnect': 'warn',
+      '@typescript-eslint/no-unused-vars': 'error',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/prefer-const': 'error',
+      '@typescript-eslint/no-non-null-assertion': 'warn',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off',
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
+      'no-unused-vars': 'off',
+      'no-console': 'warn',
+      'prefer-const': 'off',
+    },
+    settings: {
+      react: {
+        version: 'detect',
+      },
+      next: {
+        rootDir: ['apps/'],
+      },
+    },
+  },
+  {
+    files: ['packages/**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       parser: tsParser,
       parserOptions: {
@@ -36,23 +80,11 @@ export default [
       '@typescript-eslint': tsPlugin,
     },
     rules: {
-      // TypeScript rules
       '@typescript-eslint/no-unused-vars': 'error',
       '@typescript-eslint/no-explicit-any': 'warn',
-
-      // Next.js specific rules
       'prefer-const': 'error',
-      'no-unused-vars': 'off', // Turned off in favor of @typescript-eslint/no-unused-vars
+      'no-unused-vars': 'off',
       'no-console': 'warn',
-
-      // React/Next.js rules
-      'react/prop-types': 'off', // Not needed with TypeScript
-      'react/react-in-jsx-scope': 'off', // Not needed in Next.js
-    },
-    settings: {
-      react: {
-        version: 'detect',
-      },
     },
   },
   {
@@ -68,7 +100,6 @@ export default [
       '@typescript-eslint': tsPlugin,
     },
     rules: {
-      // Relaxed rules for config files
       'no-console': 'off',
       '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
@@ -87,7 +118,6 @@ export default [
       '@typescript-eslint': tsPlugin,
     },
     rules: {
-      // API routes can have specific rules
       'no-console': 'off',
     },
   },
